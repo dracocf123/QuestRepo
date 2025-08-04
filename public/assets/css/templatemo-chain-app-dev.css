@@ -43,6 +43,97 @@ figure, header, nav, section, article, aside, footer, figcaption {
   outline: 0;
 }
 
+/*UPDATED ABOUT SECTION CSS*/
+.custom-modal {
+  border-radius: 25px;
+  background-color: #ffffff;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+
+.custom-modal .modal-header {
+  background: linear-gradient(105deg, rgba(91,104,235,0.1) 0%, rgba(40,225,253,0.1) 100%);
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.custom-modal .modal-body {
+  padding: 20px 30px;
+  color: #2a2a2a;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.custom-modal .modal-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #4b8ef1;
+}
+
+.custom-modal .btn-close {
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.custom-modal .modal-footer .btn {
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-modal .modal-footer .btn:hover {
+  background-color: #4b8ef1;
+  color: white;
+  border-color: #4b8ef1;
+}
+
+.custom-modal .list-group-item {
+  border: none;
+  font-size: 16px;
+  padding-left: 0;
+  padding-right: 0;
+  color: #2a2a2a;
+  background-color: transparent;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.custom-modal .list-group-item::before {
+  content: "•";
+  color: #4b8ef1;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.custom-modal::after{
+  content: '';
+  background-image: url(../images/services-left-dec.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  bottom: -300px;
+  width: 261px;
+  height: 368px;
+  z-index: 0;
+}
+
+.custom-modal::before {
+  content: '';
+  background-image: url(../images/services-right-dec.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1136px;
+  height: 244px;
+  z-index: 0;
+}
+
+/*End of UPDATED ABOUT SECTION CSS*/
+
 /* clear fix */
 .grid:after {
   content: '';
