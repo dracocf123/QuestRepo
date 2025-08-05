@@ -123,6 +123,7 @@ figure, header, nav, section, article, aside, footer, figcaption {
 .custom-modal::before {
   content: '';
   background-image: url(../images/services-right-dec.png);
+  content: ''; 
   background-repeat: no-repeat;
   position: absolute;
   right: 0;
@@ -193,7 +194,7 @@ header, nav, section, article, aside, footer, hgroup {
 }
 
 html, body {
-  font-family: 'Roboto', sans-serif;
+  font-family: raleway-semibold, raleway, sans-serif;
   font-weight: 400;
   background-color: #fff;
   -ms-text-size-adjust: 100%;
@@ -233,7 +234,9 @@ global styles
 html,
 body {
   background: #fff;
-  font-family: 'Roboto', sans-serif;
+  body {
+  font-family: 'Poppins', sans-serif;
+}
 }
 
 ::selection {
@@ -415,7 +418,7 @@ header
 }
 
 .background-header .nav li:last-child a.active:after {
-  background-color: transparent;
+  background-color: #4b8ef1;
 }
 
 .header-area {
@@ -497,7 +500,7 @@ header
 .background-header .main-nav .nav li:last-child a:hover,
 .header-area .main-nav .nav li:nth-child(6) a:hover ,
 .background-header .main-nav .nav li:nth-child(6) a:hover {
-  color: #fff !important;
+  color: #4b8ef1 !important;
 }
 
 .header-area .main-nav .nav li a {
@@ -522,7 +525,7 @@ header
 }
 
 .header-area .main-nav .nav li:last-child a.active {
-  color: #fff !important;
+  color: #4b8ef1 !important;
 }
 
 .background-header .main-nav .nav li:hover a,
@@ -1138,37 +1141,48 @@ Services Style
   color: #fff;
 }
 
+
+/* Jay Updated icons */
+
 .first-service .icon {
-  background-image: url(../images/service-icon-01.png);
+  background-image: url(../quest-icon/cpr_2231082.png);
+  background-size: 50px;
 }
 
 .first-service:hover .icon {
-  background-image: url(../images/service-icon-hover-01.png);
+  background-image: url(../quest-icon/cpr_2231082.png);
+  background-size: 50px;
 }
 
 .second-service .icon {
-  background-image: url(../images/service-icon-02.png);
+  background-image: url(../quest-icon/Inhaler-Mouth--Streamline-Ultimate.png);
+  background-size: 50px;
 }
 
 .second-service:hover .icon {
-  background-image: url(../images/service-icon-hover-02.png);
+  background-image: url(../quest-icon/Inhaler-Mouth--Streamline-Ultimate.png);
+  background-size: 50px;
 }
 
 
 .third-service .icon {
-  background-image: url(../images/service-icon-03.png);
+  background-image: url(../quest-icon/health-care_18572340.png);
+  background-size: 50px;
 }
 
 .third-service:hover .icon {
-  background-image: url(../images/service-icon-hover-03.png);
+  background-image: url(../quest-icon/health-care_18572340.png);
+  background-size: 50px;
 }
 
 .fourth-service .icon {
-  background-image: url(../images/service-icon-04.png);
+  background-image: url(../quest-icon/education_15193017.png);
+  background-size: 50px;
 }
 
 .fourth-service:hover .icon {
-  background-image: url(../images/service-icon-hover-04.png);
+  background-image: url(../quest-icon/education_15193017.png);
+  background-size: 50px;
 }
 
 .service-item:hover {
