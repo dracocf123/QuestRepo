@@ -136,10 +136,7 @@ figure, header, nav, section, article, aside, footer, figcaption {
 
 /*Continuation of ABOUT SECTION CSS*/
 .client-section {
-<<<<<<< HEAD
-=======
   margin-top: 100px;
->>>>>>> d46374e (8/6 update)
   padding: 60px 20px;
   background: linear-gradient(135deg, #e0f7fa, #ffffff);
   text-align: center;
@@ -261,8 +258,6 @@ figure, header, nav, section, article, aside, footer, figcaption {
 }
 /*End of the Continuation of ABOUT SECTION CSS*/
 
-<<<<<<< HEAD
-=======
 /* testimonial */
 .tes-screen {
   height: 75vh;
@@ -394,7 +389,7 @@ figure, header, nav, section, article, aside, footer, figcaption {
 
     /* testemonial end */
 
->>>>>>> d46374e (8/6 update)
+    
 /* clear fix */
 .grid:after {
   content: '';
