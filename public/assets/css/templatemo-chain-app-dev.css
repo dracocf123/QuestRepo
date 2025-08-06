@@ -136,6 +136,7 @@ figure, header, nav, section, article, aside, footer, figcaption {
 
 /*Continuation of ABOUT SECTION CSS*/
 .client-section {
+  margin-top: 100px;
   padding: 60px 20px;
   background: linear-gradient(135deg, #e0f7fa, #ffffff);
   text-align: center;
@@ -274,6 +275,138 @@ figure, header, nav, section, article, aside, footer, figcaption {
 }
 /*End of the Continuation of ABOUT SECTION CSS*/
 
+/* testimonial */
+.tes-screen {
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tes-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+#testimonial {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+}
+
+/* Owl Carousel Item */
+.owl-carousel .item {
+  background:whitesmoke;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+}
+
+.owl-carousel .item:before {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-image: url(../images/regular-table-top.png);
+    z-index: 0;
+    content: '';
+    width: 274px;
+    height: 221px;
+    border-radius: 10px;
+}
+
+/* Testimonial Image */
+.testimonial-img,
+.owl-carousel .owl-item img.testimonial-img {
+  width: 1000px;
+  height: 1000px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #4b8ef1;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Headings & Text */
+.owl-carousel .item h4 {
+  font-size: 1.1rem;
+  color: #003b80;
+  margin-bottom: 8px;
+}
+
+.owl-carousel .item p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Custom Navigation Buttons */
+.owl-nav button {
+  background-color: #007bff !important;
+  color: #fff !important;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 18px;
+  line-height: 35px;
+  border: none;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.owl-nav .owl-prev {
+  left: -50px;
+}
+
+.owl-nav .owl-next {
+  right: -50px;
+}
+
+/* Hide nav buttons on mobile */
+@media (max-width: 768px) {
+  .owl-nav button {
+    display: none;
+  }
+
+  .testimonial-img,
+  .owl-carousel .owl-item img.testimonial-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .owl-carousel .item h4 {
+    font-size: 16px;
+  }
+
+  .owl-carousel .item p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-img,
+  .owl-carousel .owl-item img.testimonial-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .owl-carousel .item h4 {
+    font-size: 14px;
+  }
+
+  .owl-carousel .item p {
+    font-size: 12px;
+  }
+}
+
+
+    /* testemonial end */
+
+    
 /* clear fix */
 .grid:after {
   content: '';
@@ -1355,6 +1488,9 @@ About Us
 .about-us .box-item span {
   position: relative;
   z-index: 1;
+}
+.box-item:hover{
+  cursor: pointer;
 }
 
 .about-us .box-item {
