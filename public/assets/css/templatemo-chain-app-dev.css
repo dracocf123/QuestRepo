@@ -43,6 +43,48 @@ figure, header, nav, section, article, aside, footer, figcaption {
   outline: 0;
 }
 
+/*UPDATED COURSES AND SERVICES SECTION CSS*/
+.bls-modal-body section {
+  margin-bottom: 30px;
+}
+
+.section-box {
+  background-color: #f9fbfd;
+  border-left: 4px solid #4b8ef1;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.section-highlight {
+  background-color: #eef7ff;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #00b4d8;
+  color: #2a2a2a;
+}
+
+.list-icons {
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+.list-icons li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+}
+
+.list-icons li::before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  font-size: 16px;
+  color: #4b8ef1;
+}
+
+/*END OF UPDATED COURSES AND SERVICES SECTION CSS*/
+
 /*UPDATED ABOUT SECTION CSS*/
 .custom-modal {
   border-radius: 25px;
@@ -120,6 +162,11 @@ figure, header, nav, section, article, aside, footer, figcaption {
   z-index: 0;
 }
 
+.bls-modal-body ul {
+  padding-left: 20px;
+}
+
+/*
 .custom-modal::before {
   content: '';
   background-image: url(../images/services-right-dec.png);
@@ -132,6 +179,7 @@ figure, header, nav, section, article, aside, footer, figcaption {
   height: 244px;
   z-index: 0;
 }
+*/
 /*End of UPDATED ABOUT SECTION CSS*/
 
 /*Continuation of ABOUT SECTION CSS*/
