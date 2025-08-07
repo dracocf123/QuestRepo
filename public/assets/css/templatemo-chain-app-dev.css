@@ -258,6 +258,34 @@ figure, header, nav, section, article, aside, footer, figcaption {
 }
 /*End of the Continuation of ABOUT SECTION CSS*/
 
+
+/* Smooth scale transition */
+.comp-logo {
+  transition: transform 0.3s ease-in-out;
+}
+
+.comp-logo:hover {
+  transform: scale(1.1); /* adjust zoom if needed */
+}
+
+/* Remove highlight (blue overlay) when clicking or hovering link */
+.logo a {
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Optional: remove blue border or highlight on image itself */
+.comp-logo {
+  border: none;
+}
+
+/* If you want the background-color on anchor hover to be clean */
+.logo a:hover {
+  background-color: transparent;
+}
+
+
 /* testimonial */
 .tes-screen {
   height: 75vh;
@@ -473,7 +501,6 @@ ul {
 p {
   font-size: 15px;
   line-height: 30px;
-  font-weight: bold;
 }
 
 img {

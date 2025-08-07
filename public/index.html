@@ -12,12 +12,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <title>SAMPLE WEBSITE</title>
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css">
+    
+    <title>Quest Solutions</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-jQ7rHcNOfP6j9rLgrY+eKw4CJz5LjXKboAnPtDZ1e8xZzflgDUbLRb2nCbbQhEORbQ7IgKzR97Yl0LZ1hI9puw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!--
 
 -->
@@ -853,7 +854,7 @@
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="pricing-item-pro">
+          <div class="pricing-item-regular">
             <span class="price">$25</span>
             <h4>Business Plan App</h4>
             <div class="icon">
@@ -895,33 +896,79 @@
       </div>
     </div>
   </div> 
-  <section id="contact" style="background: #f9fafe; padding: 60px 20px;">
-  <div class="container" style="max-width: 1000px; margin: 0 auto;">
-    <h2 style="text-align: center; font-size: 28px; font-weight: 600; margin-bottom: 10px; color: #0f1c4d;">
+
+<section id="contact" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-2" style="color: #0f1c4d; font-weight: 600;">
       How to Reach Us!
     </h2>
-    <p style="text-align: center; font-size: 16px; color: #666; margin-bottom: 40px;">
+    <p class="text-center mb-5 text-muted">
       We're happy to answer your questions and help you get started.
     </p>
 
-    <form action="#" method="POST" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-      <input type="text" name="first_name" placeholder="First Name" required style="padding: 12px; border: 1px solid #ddd; border-radius: 8px;" />
-      <input type="text" name="last_name" placeholder="Last Name" required style="padding: 12px; border: 1px solid #ddd; border-radius: 8px;" />
-      <input type="email" name="email" placeholder="Email" required style="padding: 12px; border: 1px solid #ddd; border-radius: 8px; grid-column: span 2;" />
-      <textarea name="message" placeholder="Your Message" rows="5" required style="padding: 12px; border: 1px solid #ddd; border-radius: 8px; grid-column: span 2;"></textarea>
-      <button type="submit" style="padding: 12px 25px; background-color: #0056ff; color: #fff; border: none; border-radius: 8px; font-weight: 500; grid-column: span 2; cursor: pointer;">
-        Send
-      </button>
-    </form>
+    <div class="row g-5">
+      <!-- FORM COLUMN -->
+      <div class="col-md-6">
+        <form action="#" method="POST" class="row g-3">
+          <div class="col-md-6">
+            <input type="text" name="first_name" class="form-control" placeholder="First Name" required>
+          </div>
+          <div class="col-md-6">
+            <input type="text" name="last_name" class="form-control" placeholder="Last Name" required>
+          </div>
+          <div class="col-12">
+            <input type="email" name="email" class="form-control" placeholder="Email *" required>
+          </div>
+          <div class="col-12">
+            <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <div class="col-12 text-end border-button">
+            <a href="#">Send</a>
+          </div>
+        </form>
+      </div>
 
-    <div style="margin-top: 40px; text-align: center; font-size: 15px; color: #333;">
-      <p><strong>Quezon City:</strong> 4th Floor, Lemon Square Building, 1199 EDSA, Brgy. Katipunan, Quezon City</p>
-      <p><strong>Batangas:</strong> 28 Johndel Subdivision, Nasugbu, Batangas 4231</p>
-      <p><strong>Phone:</strong> (+63) 917 159 0154 | (02) 7001-4822</p>
-      <p><strong>Email:</strong> admin@questsolutionscorp.com</p>
+      <!-- MAP + CONTACT INFO COLUMN -->
+      <div class="col-md-6">
+        <!-- MAP -->
+        <div class="mb-4">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1364.7080267781455!2d121.01711889390862!3d14.657235371225742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b6ee27dc9127%3A0x38c769902fb03c83!2sLemon%20Square!5e0!3m2!1sen!2sus!4v1754531649358!5m2!1sen!2sus"
+            width="100%" height="200" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!-- CONTACT DETAILS -->
+        <div class="mb-3 d-flex">
+          <i class="fi fi-rs-marker me-3" style="font-size: 24px; color: #4b8ef1;"></i>
+          <div>
+            <p class="mb-1"><strong>Quezon City:</strong> 4th Floor, Lemon Square Building, 1199 EDSA, Brgy. Katipunan, Quezon City</p>
+            <p class="mb-0"><strong>Batangas:</strong> 28 Johndel Subdivision, Nasugbu, Batangas 4231</p>
+          </div>
+        </div>
+
+        <div class="mb-3 d-flex">
+          <i class="fi fi-rs-phone-flip me-3" style="font-size: 24px; color: #4b8ef1;"></i>
+          <p class="mb-0 fw-bold">(+63) 917 159 0154 | (02) 7001-4822</p>
+        </div>
+
+        <div class="mb-3 d-flex">
+          <i class="fi fi-rs-envelope me-3" style="font-size: 24px; color: #4b8ef1;"></i>
+          <p class="mb-0">admin@questsolutionscorp.com</p>
+        </div>
+
+        <div class="d-flex align-items-center">
+          <i class="fab fa-facebook me-2" style="font-size: 24px; color: #3b5998;"></i>
+          <a href="https://www.facebook.com/questsolutionscorp" target="_blank" class="text-decoration-none">
+            facebook.com/questsolutionscorp
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+
 
 
 
@@ -951,27 +998,17 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-3">
+        <div class="col-lg-4">
           <div class="footer-widget">
             <h4>Contact Us</h4>
-            <p>Rio de Janeiro - RJ, 22795-008, Brazil</p>
-            <p><a href="#">010-020-0340</a></p>
+            <p>4th Floor, Lemon Square Building, 1199 EDSA, Brgy. Katipunan, Quezon City</p>
+            <p>28 Johndel Subdivision, Nasugbu, Batangas 4231</p>
+            <p><a href="#">(+63) 917 159 0154 | (02) 7001-4822</a></p>
             <p><a href="#">info@company.co</a></p>
           </div>
         </div>
-        <div class="col-lg-3">
-          <div class="footer-widget">
-            <h4>About Us</h4>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#testimonial">Testimonials</a></li>
-              <li><a href="#pricing">Pricing</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3">
+        
+        <!-- <div class="col-lg-3">
           <div class="footer-widget">
             <h4>Useful Links</h4>
             <ul>
@@ -987,19 +1024,33 @@
               <li><a href="#s">Normal Apps</a></li>
             </ul>
           </div>
-        </div>
-        <div class="col-lg-3">
+        </div> -->
+        <div class="col-lg-6">
           <div class="footer-widget">
             <h4>About Our Company</h4>
+            <p>The company's mission is to provide services and training in the areas of health, professional development, safety, accounting, and information technology to assist not only businesses but also individuals who want to abide by local laws both domestically and abroad. Additionally, for individuals who want to improve as professionals.</p>
             <div class="logo">
-              <img src="assets/quest-photo/logo.avif" class="bg-white p-1 rounded" alt="">
+              <a href="https://www.facebook.com/questsolutionscorp">
+                <img src="assets/quest-photo/logo.avif" class="bg-white p-1 rounded comp-logo" alt="">
+              </a>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="footer-widget">
+            <h4>About Us</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#testimonial">Testimonials</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+            </ul>
           </div>
         </div>
         <div class="col-lg-12">
           <div class="copyright-text">
-            <p>Copyright © 2022 Sample Company. All Rights Reserved. 
+            <p>©2024 by Quest Solutions Training and Consultancy Services Corporation.
           <br></p>
           </div>
         </div>
