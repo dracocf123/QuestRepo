@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css">
-    
+    <link rel="icon" sizes="192x192" href="https://static.wixstatic.com/media/347db9_ca4e3efc950541ed956aec905960e0cb%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/347db9_ca4e3efc950541ed956aec905960e0cb%7Emv2.png" type="image/png"/>
     <title>Quest Solutions</title>
 
     <!-- Bootstrap core CSS -->
@@ -968,7 +968,7 @@
         </p>
       <script src="assets/js/partners-carousel.js" defer></script> 
       <div class="carousel-wrapper">
-        <button class="carousel-btn prev">&#10094;</button>
+        <!-- <button class="carousel-btn prev">&#10094;</button> -->
         <div class="logo-carousel" id="logoCarousel">
               <div class="logo-item" title="Partner 1"><img src="assets/quest-photo/p1.png" alt="Partner 1"></div>
               <div class="logo-item" title="Partner 2"><img src="assets/quest-photo/p2.png" alt="Partner 2"></div>
@@ -993,8 +993,13 @@
               <div class="logo-item" title="Partner 18"><img src="assets/quest-photo/p21.jpg" alt="Partner 21"></div>
           <!-- Add more logos as needed -->
         </div>
-        <button class="carousel-btn next">&#10095;</button>
+        <!-- <button class="carousel-btn next">&#10095;</button> -->
       </div>
+      <div class="carousel-controls">
+        <button type="button" class="button-border prev-btn">&#10094;</button>
+        <button type="button" class="button-border next-btn">&#10095;</button>
+      </div>
+
     </div>
   </div>
   <!--End of Updated Continuation of ABOUT SECTION -->
@@ -1003,7 +1008,7 @@
   <!-- testimonial -->  
   <section id="testimonial" class="tes-screen">
     <div class="tes-container">
-      <h1 class="text-center pb-3">What Our Clients Say</h1>
+        <h2 class="text-center pb-3 section-title">What Our <span>Clients</span> Say</h2>
       <div class="owl-carousel owl-theme">
         <div class="item">
           <div>
@@ -1393,19 +1398,19 @@
       <div class="col-md-6">
         <form action="#" method="POST" class="row g-3">
           <div class="col-md-6">
-            <input type="text" name="first_name" class="form-control" placeholder="First Name" required>
+            <input type="text" name="first_name" id="fname" class="form-control" placeholder="First Name" required>
           </div>
           <div class="col-md-6">
-            <input type="text" name="last_name" class="form-control" placeholder="Last Name" required>
+            <input type="text" name="last_name" id="lname" class="form-control" placeholder="Last Name" required>
           </div>
           <div class="col-12">
-            <input type="email" name="email" class="form-control" placeholder="Email *" required>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Email *" required>
           </div>
           <div class="col-12">
-            <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+            <textarea name="message" id="messages" class="form-control" rows="5" placeholder="Your Message" required></textarea>
           </div>
           <div class="col-12 text-end border-button">
-            <a href="#">Send</a>
+            <a href="#" id="submit">Send</a>
           </div>
         </form>
       </div>
@@ -1539,7 +1544,40 @@
       </div>
     </div>
   </footer>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+  import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-database.js";
 
+  const firebaseConfig = {
+    apiKey: "AIzaSyCu6_9QpvCwE4H9chmlIBa8xzf1MNtwA0k",
+    authDomain: "quest-website-182ab.firebaseapp.com",
+    databaseURL: "https://quest-website-182ab-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "quest-website-182ab",
+    storageBucket: "quest-website-182ab.appspot.com",
+    messagingSenderId: "137875605066",
+    appId: "1:137875605066:web:7ce35686f181ec5e4c88b3"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+
+  document.getElementById("submit").addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const timestamp = Date.now(); 
+    set(ref(db, 'ContactUs/' + timestamp), {
+      firstname: document.getElementById("fname").value,
+      lastname: document.getElementById("lname").value,
+      email: document.getElementById("email").value,
+      messages: document.getElementById("messages").value
+    }).then(() => {
+      alert("Message Sent!");
+    }).catch((error) => {
+      console.error("Error saving message:", error);
+    });
+  });
+</script>
 
   <!-- Scripts -->
   <script src="vendor/jquery/jquery.min.js"></script>

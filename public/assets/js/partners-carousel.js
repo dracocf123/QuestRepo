@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const carousel = document.getElementById("logoCarousel");
-    const nextBtn = document.querySelector(".carousel-btn.next");
-    const prevBtn = document.querySelector(".carousel-btn.prev");
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+
     let isSliding = false;
     let autoSlide;
 
