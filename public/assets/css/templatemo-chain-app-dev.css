@@ -186,7 +186,6 @@ figure, header, nav, section, article, aside, footer, figcaption {
 .client-section {
   margin-top: 100px;
   padding: 60px 20px;
-  background: linear-gradient(135deg, #e0f7fa, #ffffff);
   text-align: center;
   height: 100vh;
 }
@@ -231,7 +230,7 @@ figure, header, nav, section, article, aside, footer, figcaption {
   max-width: 33.33%;
   padding: 10px;
   box-sizing: border-box;
-  opacity: 1; /* Fully opaque to preserve image color */
+  opacity: 1;
   transform: scale(0.85);
   transition: transform 0.4s ease;
   display: flex;
@@ -244,7 +243,7 @@ figure, header, nav, section, article, aside, footer, figcaption {
 .logo-item::before {
   content: "";
   position: absolute;
-  background-color: #ffffff; /* Card background */
+  background-color: #ffffff;
   border-radius: 16px;
   width: 85%;
   height: 100%;
