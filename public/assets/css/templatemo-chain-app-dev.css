@@ -354,6 +354,8 @@ figure, header, nav, section, article, aside, footer, figcaption {
 }
 /*End of the Continuation of ABOUT SECTION CSS*/
 
+
+
 #gallery {
   text-align: center;
   margin-top: 100px;
@@ -362,7 +364,7 @@ figure, header, nav, section, article, aside, footer, figcaption {
 ul.results {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 7px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -374,33 +376,84 @@ ul.results {
 }
 
 .result img {
-  width: 200px;
-  height: 150px;
+  width: 250px;
+  height: 175px;
   object-fit: cover;
   border-radius: 5px;
   cursor: zoom-in;
+  transition: transform 0.2s ease-in-out; /* smooth hover zoom */
+  border: 3px solid transparent;
+}
+/* Hover effect - center image + border */
+.result img:hover {
+  transform: none; /* no scaling */
+  border: 3px solid #4b8ef1;
+  z-index: 1000;
 }
 
-/* Full-size preview on hover */
-/* Full-size preview on hover */
-.result:hover::after {
-  content: "";
+/* Fullscreen viewer styles */
+.fullscreen-viewer {
+  display: none;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-image: var(--full-img-url);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  width: var(--full-img-width);
-  height: var(--full-img-height);
-  max-width: 100vw;
-  max-height: 100vh;
   z-index: 9999;
-  border: 2px solid #fff;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  background-color: rgba(0,0,0,0.7); /* optional for contrast */
+  inset: 0;
+  background: white;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  animation: fadeIn 0.2s ease-out;
+  flex-direction: column;
+}
+
+.fullscreen-viewer img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.fullscreen-viewer.active {
+  display: flex;
+}
+
+/* Close button */
+.fullscreen-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  color: #4b8ef1;
+  cursor: pointer;
+  user-select: none;
+  font-weight: bold;
+}
+
+/* Navigation buttons */
+.fullscreen-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  background: white;
+  border: 3px solid #4b8ef1;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 23px;
+  user-select: none;
+}
+
+.fullscreen-prev {
+  left: 13px;
+}
+
+.fullscreen-next {
+  right: 13px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 

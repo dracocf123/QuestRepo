@@ -1397,71 +1397,124 @@
         <div class="col-lg-12">
           <ul class="results d-flex flex-wrap justify-content-center list-unstyled">
             <li class="result">
-              <img src="assets/quest-photo/gallery1.png" width="500" height="500" alt="">
+              <img src="assets/quest-gallery/347db9_14a55c985a4a435f9aff810bf929a9a2~mv2.avif" width="500" height="500" alt="">
             </li>
             <li class="result">
-              <img src="assets/quest-photo/gallery2.png" width="500" height="500" alt="">
+              <img src="assets/quest-gallery/347db9_1a166885f1ee46d1a8ccb42034b3d43c~mv2.avif" width="500" height="500" alt="">
             </li>
             <li class="result">
-              <img src="assets/quest-photo/gallery3.png" width="500" height="500" alt="">
+              <img src="assets/quest-gallery/347db9_2374f8dd710046f68411108e49bc9234~mv2.avif" width="500" height="500" alt="">
             </li>
             <li class="result">
-              <img src="assets/quest-photo/gallery4.png" width="500" height="500" alt="">
+              <img src="assets/quest-gallery/347db9_2dc158317a4c4a1d90752073678e8d75~mv2.avif" width="500" height="500" alt="">
             </li>
             <li class="result">
-              <img src="assets/quest-photo/gallery5.png" width="500" height="500" alt="">
+              <img src="assets/quest-gallery/347db9_47f3298e53634629b5216d1c797574b2~mv2.avif" width="500" height="500" alt="">
             </li>
             <li class="result">
-              <img src="assets/quest-photo/gallery6.png" width="500" height="500" alt="">
+              <img src="assets/quest-gallery/347db9_5d8b3eeb123742f1a1eb3e6d5cec1a5a~mv2.avif" width="500" height="500" alt="">
             </li>
             <li class="result">
-              <img src="assets/quest-photo/gallery8.png" width="500" height="500" alt="">
+              <img src="assets/quest-gallery/347db9_60ebfe2da6cc45a7a50c7bd40cee395a~mv2.avif" width="500" height="500" alt="">
             </li>
             <li class="result">
-              <img src="assets/quest-photo/gallery9.png" width="500" height="500" alt="">
+              <img src="assets/quest-gallery/347db9_8701a79a2f984abbb5c5106116ff82aa~mv2.avif" width="500" height="500" alt="">
             </li>
             <li class="result">
-              <img src="assets/quest-photo/gallery10.png" width="500" height="500" alt="">
+              <img src="assets/quest-gallery/347db9_9c6374201d394fae813bfcd87f4ada0b~mv2.avif" width="500" height="500" alt="">
             </li>
             <li class="result">
-              <img src="assets/quest-photo/gallery11.png" width="500" height="500" alt="">
+              <img src="assets/quest-gallery/347db9_9cde34d9d0cd4a0fb34e4a32fb013c44~mv2.avif" width="500" height="500" alt="">
             </li>
             <li class="result">
-              <img src="assets/quest-photo/gallery12.png" width="500" height="500" alt="">
+              <img src="assets/quest-gallery/347db9_a6fb2596f0044aada3507b8d797c2179~mv2.avif" width="500" height="500" alt="">
             </li>
             <li class="result">
-              <img src="assets/quest-photo/gallery13.png" width="500" height="500" alt="">
+              <img src="assets/quest-gallery/347db9_b88caa5a7cd64b44b1d259cb1caf7db5~mv2.avif" width="500" height="500" alt="">
             </li>
             <li class="result">
-              <img src="assets/quest-photo/gallery14.png" width="500" height="500" alt="">
+              <img src="assets/quest-gallery/347db9_e64048daa6f64833a427836b40fa8e37~mv2.avif" width="500" height="500" alt="">
             </li>
             <li class="result">
-              <img src="assets/quest-photo/gallery15.png" width="500" height="500" alt="">
+              <img src="assets/quest-gallery/347db9_ed1f2928e9e44bedb9eec3efe5ac5a09~mv2.avif" width="500" height="500" alt="">
             </li>
             <li class="result">
-              <img src="assets/quest-photo/gallery16.png" width="500" height="500" alt="">
+              <img src="assets/quest-gallery/347db9_fa7d7f1054624d5cb95078a8c3b3a308~mv2.avif" width="500" height="500" alt="">
             </li>
           </ul>
         </div>
       </div>
     </div>
-  </div>
+  </section>
   
-  <!-- Lightbox Overlay -->
-  <div id="lightbox" class="lightbox">
-    <span class="close">&times;</span>
-    <img id="lightbox-img" src="" alt="">
-  </div>
-
 <script>
-document.querySelectorAll(".result img").forEach(img => {
-  img.parentElement.style.setProperty("--full-img-url", `url('${img.src}')`);
-  img.parentElement.style.setProperty("--full-img-width", img.naturalWidth + "px");
-  img.parentElement.style.setProperty("--full-img-height", img.naturalHeight + "px");
+const images = document.querySelectorAll(".result img");
+let currentIndex = 0;
+
+// Create fullscreen viewer container
+const fullscreenViewer = document.createElement("div");
+fullscreenViewer.classList.add("fullscreen-viewer");
+
+const fullscreenImg = document.createElement("img");
+fullscreenViewer.appendChild(fullscreenImg);
+
+const closeBtn = document.createElement("div");
+closeBtn.classList.add("fullscreen-close");
+closeBtn.textContent = "✕";
+fullscreenViewer.appendChild(closeBtn);
+
+// Prev button
+const prevBtn = document.createElement("button");
+prevBtn.classList.add("fullscreen-nav", "fullscreen-prev");
+prevBtn.textContent = "❮";
+fullscreenViewer.appendChild(prevBtn);
+
+// Next button
+const nextBtn = document.createElement("button");
+nextBtn.classList.add("fullscreen-nav", "fullscreen-next");
+nextBtn.textContent = "❯";
+fullscreenViewer.appendChild(nextBtn);
+
+document.body.appendChild(fullscreenViewer);
+
+// Show image in fullscreen
+function showImage(index) {
+  currentIndex = index;
+  fullscreenImg.src = images[currentIndex].src;
+  fullscreenViewer.classList.add("active");
+}
+
+// Handle image clicks
+images.forEach((img, index) => {
+  img.addEventListener("click", () => {
+    showImage(index);
+  });
 });
 
-</script>
+// Close fullscreen
+closeBtn.addEventListener("click", () => {
+  fullscreenViewer.classList.remove("active");
+});
+fullscreenViewer.addEventListener("click", (e) => {
+  if (e.target === fullscreenViewer) {
+    fullscreenViewer.classList.remove("active");
+  }
+});
 
+// Prev button click
+prevBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  showImage(currentIndex);
+});
+
+// Next button click
+nextBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  currentIndex = (currentIndex + 1) % images.length;
+  showImage(currentIndex);
+});
+</script>
 
 
 <section id="contact" class="py-5">
