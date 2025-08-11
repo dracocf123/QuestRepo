@@ -1384,11 +1384,11 @@
   </div> -->
 
   <!--UPDATED Gallery-->
-  <section id="gallery" class="py-5 scroll-offset">
+  <section id="gallery" class="py-5 scroll-offset mt-5">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
-          <div class="gallery-heading">
+          <div class="gallery-heading mb-5">
             <h2 class="section-title">Our <span>Successful Conductions</span></h2>
             <p>"We Tailor fit all the Trainings depends on the Client Needs"</p>
           </div>
@@ -1445,6 +1445,22 @@
       </div>
     </div>
   </div>
+  
+  <!-- Lightbox Overlay -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+<script>
+document.querySelectorAll(".result img").forEach(img => {
+  img.parentElement.style.setProperty("--full-img-url", `url('${img.src}')`);
+  img.parentElement.style.setProperty("--full-img-width", img.naturalWidth + "px");
+  img.parentElement.style.setProperty("--full-img-height", img.naturalHeight + "px");
+});
+
+</script>
+
 
 
 <section id="contact" class="py-5">
