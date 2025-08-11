@@ -963,7 +963,7 @@
   <div class="client-section">
     <div class="container">
       <h2 class="section-title">Some of Our <span>Clients and Partners</span></h2>
-       <p class="client-description">
+        <p class="client-description">
           Our clientele consists of corporations, shipping firms, hospitals, culinary schools, international schools, as well as other organizations from around the world. We always ensure that clients receive the high-quality training and services they require for their organization. They can get services that are specifically suited to them, focused on students, and most importantly, affordable.
         </p>
       <script src="assets/js/partners-carousel.js" defer></script> 
@@ -999,7 +999,6 @@
         <button type="button" class="button-border prev-btn">&#10094;</button>
         <button type="button" class="button-border next-btn">&#10095;</button>
       </div>
-
     </div>
   </div>
   <!--End of Updated Continuation of ABOUT SECTION -->
@@ -1310,7 +1309,8 @@
     </div>
   </div> -->
 
-  <div id="pricing" class="pricing-tables">
+  <!--Previous PRICING SECTION-->
+  <!-- <div id="pricing" class="pricing-tables">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
@@ -1382,7 +1382,87 @@
         </div>
       </div>
     </div>
-  </div> 
+  </div> -->
+
+  <!--UPDATED Gallery-->
+  <section id="gallery" class="py-5 scroll-offset mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="gallery-heading mb-5">
+            <h2 class="section-title">Our <span>Successful Conductions</span></h2>
+            <p>"We Tailor fit all the Trainings depends on the Client Needs"</p>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <ul class="results d-flex flex-wrap justify-content-center list-unstyled">
+            <li class="result">
+              <img src="assets/quest-photo/gallery1.png" width="500" height="500" alt="">
+            </li>
+            <li class="result">
+              <img src="assets/quest-photo/gallery2.png" width="500" height="500" alt="">
+            </li>
+            <li class="result">
+              <img src="assets/quest-photo/gallery3.png" width="500" height="500" alt="">
+            </li>
+            <li class="result">
+              <img src="assets/quest-photo/gallery4.png" width="500" height="500" alt="">
+            </li>
+            <li class="result">
+              <img src="assets/quest-photo/gallery5.png" width="500" height="500" alt="">
+            </li>
+            <li class="result">
+              <img src="assets/quest-photo/gallery6.png" width="500" height="500" alt="">
+            </li>
+            <li class="result">
+              <img src="assets/quest-photo/gallery8.png" width="500" height="500" alt="">
+            </li>
+            <li class="result">
+              <img src="assets/quest-photo/gallery9.png" width="500" height="500" alt="">
+            </li>
+            <li class="result">
+              <img src="assets/quest-photo/gallery10.png" width="500" height="500" alt="">
+            </li>
+            <li class="result">
+              <img src="assets/quest-photo/gallery11.png" width="500" height="500" alt="">
+            </li>
+            <li class="result">
+              <img src="assets/quest-photo/gallery12.png" width="500" height="500" alt="">
+            </li>
+            <li class="result">
+              <img src="assets/quest-photo/gallery13.png" width="500" height="500" alt="">
+            </li>
+            <li class="result">
+              <img src="assets/quest-photo/gallery14.png" width="500" height="500" alt="">
+            </li>
+            <li class="result">
+              <img src="assets/quest-photo/gallery15.png" width="500" height="500" alt="">
+            </li>
+            <li class="result">
+              <img src="assets/quest-photo/gallery16.png" width="500" height="500" alt="">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Lightbox Overlay -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+<script>
+document.querySelectorAll(".result img").forEach(img => {
+  img.parentElement.style.setProperty("--full-img-url", `url('${img.src}')`);
+  img.parentElement.style.setProperty("--full-img-width", img.naturalWidth + "px");
+  img.parentElement.style.setProperty("--full-img-height", img.naturalHeight + "px");
+});
+
+</script>
+
+
 
 <section id="contact" class="py-5">
   <div class="container">
@@ -1454,9 +1534,6 @@
     </div>
   </div>
 </section>
-
-
-
 
 
   <footer id="newsletter">

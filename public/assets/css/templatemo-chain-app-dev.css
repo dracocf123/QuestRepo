@@ -186,7 +186,6 @@ figure, header, nav, section, article, aside, footer, figcaption {
 .client-section {
   margin-top: 100px;
   padding: 60px 20px;
-  background: linear-gradient(135deg, #e0f7fa, #ffffff);
   text-align: center;
   height: 100vh;
 }
@@ -231,7 +230,7 @@ figure, header, nav, section, article, aside, footer, figcaption {
   max-width: 33.33%;
   padding: 10px;
   box-sizing: border-box;
-  opacity: 1; /* Fully opaque to preserve image color */
+  opacity: 1;
   transform: scale(0.85);
   transition: transform 0.4s ease;
   display: flex;
@@ -244,7 +243,7 @@ figure, header, nav, section, article, aside, footer, figcaption {
 .logo-item::before {
   content: "";
   position: absolute;
-  background-color: #ffffff; /* Card background */
+  background-color: #ffffff;
   border-radius: 16px;
   width: 85%;
   height: 100%;
@@ -354,6 +353,142 @@ figure, header, nav, section, article, aside, footer, figcaption {
   }
 }
 /*End of the Continuation of ABOUT SECTION CSS*/
+
+#gallery {
+  text-align: center;
+  margin-top: 100px;
+}
+
+ul.results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.result {
+  position: relative;
+}
+
+.result img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: zoom-in;
+}
+
+/* Full-size preview on hover */
+/* Full-size preview on hover */
+.result:hover::after {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: var(--full-img-url);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: var(--full-img-width);
+  height: var(--full-img-height);
+  max-width: 100vw;
+  max-height: 100vh;
+  z-index: 9999;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.7); /* optional for contrast */
+}
+
+
+
+
+/* EXTRA GALLERY CSS 
+.scroll-offset {
+  scroll-margin-top: 100px;
+}
+
+#gallery {
+  text-align: center;
+  margin-top: 100px;
+  padding: 60px 20px;
+}
+
+.gallery-box {
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+}
+
+.gallery-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+ul.results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.result {
+  padding: 0;
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex: 0 0 calc(33.333%);
+}
+
+.result img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.result img:hover {
+  transform: scale(1.1);
+}
+
+ul.results:is(:hover, :focus-within) img {
+  opacity: calc(0.1 + (var(--active-lerp, 0) * 0.9));
+  filter: grayscale(calc(1 - var(--active-lerp, 0)));
+}
+
+:root {
+  --lerp-0: 1;
+  --lerp-1: 0.6;
+  --lerp-2: 0.3;
+  --lerp-3: 0.15;
+  --lerp-4: 0.07;
+  --lerp-5: 0.03;
+  --lerp-6: 0;
+}
+
+.result:is(:hover, :focus-within) { --active-lerp: var(--lerp-0); z-index: 7; }
+.result:has(+ .result:is(:hover, :focus-within)),
+.result:is(:hover, :focus-within) + .result { --active-lerp: var(--lerp-1); z-index: 6; }
+.result:has(+ .result + .result:is(:hover, :focus-within)),
+.result:is(:hover, :focus-within) + .result + .result { --active-lerp: var(--lerp-2); z-index: 5; }
+.result:has(+ .result + .result + .result:is(:hover, :focus-within)),
+.result:is(:hover, :focus-within) + .result + .result + .result { --active-lerp: var(--lerp-3); z-index: 4; }
+.result:has(+ .result + .result + .result + .result:is(:hover, :focus-within)),
+.result:is(:hover, :focus-within) + .result + .result + .result + .result { --active-lerp: var(--lerp-4); z-index: 3; }
+.result:has(+ .result + .result + .result + .result + .result:is(:hover, :focus-within)),
+.result:is(:hover, :focus-within) + .result + .result + .result + .result + .result { --active-lerp: var(--lerp-5); z-index: 2; }
+.result:has(+ .result + .result + .result + .result + .result + .result:is(:hover, :focus-within)),
+.result:is(:hover, :focus-within) + .result + .result + .result + .result + .result + .result { --active-lerp: var(--lerp-6); z-index: 1; }
+END OF GALLERY CSS */
 
 
 /* Smooth scale transition */
